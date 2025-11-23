@@ -27,6 +27,13 @@ public class EnemyZombie : MonoBehaviour
     public float bloodYMax = 2f;           // <-- LIMITE Y
     public int bloodAmount = 3;            // <-- QUANTIDADE
 
+    [Header("Blood Scale")]
+    public Vector2 bloodScaleMin = new Vector2(0.8f, 0.8f);
+    public Vector2 bloodScaleMax = new Vector2(1.3f, 1.3f);
+
+    [Header("Blood Rotation")]
+    public bool lockBloodRotation = false; // <-- opção para travar rotação do sangue
+
     int currentHP;
     float nextAttackTime = 0f;
 
@@ -178,7 +185,7 @@ public class EnemyZombie : MonoBehaviour
         StartCoroutine(DamageFlash());
     }
 
-    // ========== NEW: BLOOD DECALS ==========
+    // ========== BLOOD DECALS ==========
     void SpawnBloodOnGround()
     {
         if (bloodPrefabs.Length == 0) return;
@@ -193,13 +200,18 @@ public class EnemyZombie : MonoBehaviour
             );
 
             GameObject prefab = bloodPrefabs[Random.Range(0, bloodPrefabs.Length)];
-
             GameObject decal = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-            // rotação e escala aleatória
-            decal.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
-            float s = Random.Range(0.8f, 1.3f);
-            decal.transform.localScale = new Vector3(s, s, 1);
+            // rotação
+            if (!lockBloodRotation)
+                decal.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0f, 360f));
+            else
+                decal.transform.rotation = Quaternion.identity;
+
+            // escala X e Y aleatória
+            float scaleX = Random.Range(bloodScaleMin.x, bloodScaleMax.x);
+            float scaleY = Random.Range(bloodScaleMin.y, bloodScaleMax.y);
+            decal.transform.localScale = new Vector3(scaleX, scaleY, 1);
         }
     }
 

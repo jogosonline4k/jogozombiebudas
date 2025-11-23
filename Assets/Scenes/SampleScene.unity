@@ -685,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92522629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 85.4, y: -0.19, z: 0}
+  m_LocalPosition: {x: 85.4, y: -0.19, z: -0.23}
   m_LocalScale: {x: 9.743072, y: 9.583893, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4176,7 +4176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649108992}
   m_LocalRotation: {x: 0, y: 0, z: 0.019197455, w: 0.9998157}
-  m_LocalPosition: {x: 23.92, y: -1.97, z: 0}
+  m_LocalPosition: {x: 23.92, y: -1.97, z: -0.48}
   m_LocalScale: {x: 6.5, y: 6.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5569,7 +5569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940649666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7, y: 1.49, z: 0}
+  m_LocalPosition: {x: 7.7, y: 1.49, z: -0.38}
   m_LocalScale: {x: 5.7, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5590,8 +5590,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0.35}
-  m_Size: {x: 0.2, y: 0.3}
+  m_Offset: {x: -0.05, y: 0.26}
+  m_Size: {x: 0.2, y: 0.0001}
   m_Direction: 0
 --- !u!1 &984507339
 GameObject:
@@ -13915,7 +13915,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462329989}
   serializedVersion: 8
-  lengthInSec: 0.3
+  lengthInSec: 0.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -14043,7 +14043,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14097,7 +14097,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.8352941}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -14159,7 +14159,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14535,14 +14535,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 2
+    type: 17
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
-    donutRadius: 0.2
-    m_Position: {x: 0, y: -1.2, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    donutRadius: 0.14
+    m_Position: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: 0, y: -90, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -14622,7 +14622,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.3
+      value: 0.47
       mode: 0
       spread: 0
       speed:
@@ -14679,8 +14679,8 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 180
-      mode: 0
+      value: 360
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
@@ -14851,7 +14851,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 7
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -14902,7 +14902,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
       cycleCount: 1
-      repeatInterval: 0.01
+      repeatInterval: 0.1
       probability: 1
   SizeModule:
     enabled: 1
@@ -15418,11 +15418,11 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -15899,7 +15899,7 @@ ParticleSystem:
     radial:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -17916,7 +17916,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minVertexDistance: 0.2
-    textureMode: 0
+    textureMode: 1
     ribbonCount: 1
     shadowBias: 0.5
     worldSpace: 0
@@ -17931,7 +17931,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.27058825}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -20239,11 +20239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 1544060249}
   spawnInterval: 0.5
-  maxZombies: 125
+  maxZombies: 70
   currentZombies: 0
-  spawnRadius: 50
+  spawnRadius: 45
   playerTransform: {fileID: 1002492677}
-  minDistanceFromPlayer: 5
+  minDistanceFromPlayer: 10
 --- !u!4 &1709936719
 Transform:
   m_ObjectHideFlags: 0
@@ -23043,7 +23043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986469902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.69, y: 1.43, z: 3.99}
+  m_LocalPosition: {x: 14.69, y: 1.43, z: -0.25}
   m_LocalScale: {x: 2.8515155, y: 2.7279716, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24439,6 +24439,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2949175913523492110, guid: ab505fc8470bc2b4c8adbbf72bec411c, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
     - target: {fileID: 4117643824891926539, guid: ab505fc8470bc2b4c8adbbf72bec411c, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -24560,6 +24564,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6975065539762543359, guid: 3ad72a2c80e271d48a498559e53a997d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad72a2c80e271d48a498559e53a997d, type: 3}
 --- !u!1001 &4521030025837887158
@@ -24659,6 +24667,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1752708244450321742, guid: d32ac34ac379c7a478fd50aea3646c56, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752708244450321742, guid: d32ac34ac379c7a478fd50aea3646c56, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752708244450321742, guid: d32ac34ac379c7a478fd50aea3646c56, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752708244450321742, guid: d32ac34ac379c7a478fd50aea3646c56, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2577688012835916036, guid: d32ac34ac379c7a478fd50aea3646c56, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -24846,8 +24870,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1719382307}
     - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
+      propertyPath: bloodScaleMax.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
+      propertyPath: bloodScaleMax.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
+      propertyPath: bloodScaleMin.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
+      propertyPath: bloodScaleMin.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
       propertyPath: bloodSpawnRadius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
+      propertyPath: lockBloodRotation
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8663336794831625169, guid: 6465a38faf94a794fabab011bd318382, type: 3}
       propertyPath: bloodPrefabs.Array.size
