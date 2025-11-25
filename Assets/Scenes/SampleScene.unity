@@ -8604,7 +8604,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940649666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 43.9, y: 1.49, z: -0.38}
+=======
+  m_LocalPosition: {x: 7.7, y: 1.49, z: -0.38}
+>>>>>>> 1246176612e510b7edf3d62562a3dc13b5409594
   m_LocalScale: {x: 5.7, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25098,15 +25102,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373f620faff0d454698f905d5ab00244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   zombiePrefabs:
   - {fileID: 1544060249}
   - {fileID: 1592961668}
   spawnInterval: 1.2
+=======
+  zombiePrefab: {fileID: 1544060249}
+  spawnInterval: 0.5
+>>>>>>> 1246176612e510b7edf3d62562a3dc13b5409594
   maxZombies: 70
   currentZombies: 0
   spawnRadius: 45
   playerTransform: {fileID: 1002492677}
+<<<<<<< HEAD
   minDistanceFromPlayer: 15
+=======
+  minDistanceFromPlayer: 10
+>>>>>>> 1246176612e510b7edf3d62562a3dc13b5409594
 --- !u!4 &1709936719
 Transform:
   m_ObjectHideFlags: 0
