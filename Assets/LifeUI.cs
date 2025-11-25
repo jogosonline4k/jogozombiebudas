@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LifeUI : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class LifeUI : MonoBehaviour
     public float flashDuration = 0.2f;
 
     public GameObject gameOverPanel;
+
+    // Lista para armazenar objetos clonados durante o jogo
+    public List<GameObject> clonedObjects = new List<GameObject>();
 
     private int lastHP;
 
@@ -98,9 +102,20 @@ public class LifeUI : MonoBehaviour
 
     public void RestartGame()
     {
+        // Destroi todos os objetos clonados
+        foreach (var obj in clonedObjects)
+        {
+            if (obj != null)
+                Destroy(obj);
+        }
+        clonedObjects.Clear();
+
         if (Character != null)
             Character.isGameOver = false;
+
         Time.timeScale = 1f;
+
+        // Reinicia a cena
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
     }
 }

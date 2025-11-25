@@ -52,11 +52,13 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsRunning", shift && moving);
             animator.SetBool("IsWalking", !shift && moving);
 
+            // Virar o personagem
             if (input.x > 0)
                 transform.localScale = new Vector3(3, 3, 1);
             else if (input.x < 0)
                 transform.localScale = new Vector3(-3, 3, 1);
 
+            // Dash
             if (Input.GetKeyDown(KeyCode.Q) && moving && dashCooldownTimer <= 0)
             {
                 dashCooldownTimer = dashCooldown;
@@ -71,7 +73,18 @@ public class PlayerMovement : MonoBehaviour
                 Character.isInvincible = true;
 
                 if (dashParticles != null)
+                {
+                    // Ajusta Velocity over Lifetime X dependendo da direção
+                    var vol = dashParticles.velocityOverLifetime;
+                    vol.enabled = true;
+
+                    if (transform.localScale.x > 0) // virado para direita
+                        vol.x = new ParticleSystem.MinMaxCurve(-5f);
+                    else // virado para esquerda
+                        vol.x = new ParticleSystem.MinMaxCurve(5f);
+
                     dashParticles.Play();
+                }
             }
         }
         else

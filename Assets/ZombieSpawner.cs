@@ -2,7 +2,9 @@
 
 public class ZombieSpawner : MonoBehaviour
 {
-    public GameObject zombiePrefab;
+    [Header("Zombie Prefabs (Normal + Tank)")]
+    public GameObject[] zombiePrefabs;   // ← AQUI VOCÊ COLOCA O NORMAL E O TANK
+
     public float spawnInterval = 2f;
     public int maxZombies = 10;
 
@@ -29,6 +31,12 @@ public class ZombieSpawner : MonoBehaviour
 
     void SpawnZombie()
     {
+        if (zombiePrefabs.Length == 0)
+        {
+            Debug.LogError("Nenhum prefab de zumbi definido no ZombieSpawner!");
+            return;
+        }
+
         Vector2 spawnPos = Vector2.zero;
         bool validPos = false;
 
@@ -51,21 +59,26 @@ public class ZombieSpawner : MonoBehaviour
         }
 
         if (!validPos)
-            return; // Não achou posição segura
+            return;
 
-        GameObject z = Instantiate(zombiePrefab, spawnPos, Quaternion.identity);
+        // Escolhe aleatoriamente ENTRE os prefabs disponíveis
+        GameObject chosenPrefab = zombiePrefabs[Random.Range(0, zombiePrefabs.Length)];
 
-        z.transform.localScale = zombiePrefab.transform.localScale;
+        GameObject z = Instantiate(chosenPrefab, spawnPos, Quaternion.identity);
 
-        EnemyZombie ez = z.GetComponent<EnemyZombie>();
+        z.transform.localScale = chosenPrefab.transform.localScale;
 
-        if (ez != null)
+        // Conteúdo do inimigo (pode ser EnemyZombie OU EnemyZombieTank)
+        var ez = z.GetComponent<EnemyZombie>();
+        var ezt = z.GetComponent<EnemyZombieTank>();
+
+        if (ez != null || ezt != null)
         {
             currentZombies++;
         }
         else
         {
-            Debug.LogWarning("Zombie prefab não tem EnemyZombie. Adicione o script EnemyZombie ao prefab.");
+            Debug.LogWarning("O prefab spawnado não possui EnemyZombie nem EnemyZombieTank!");
             Destroy(z);
         }
     }

@@ -51,16 +51,10 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (Character != null && Character.isGameOver)
-            return;
+        if (Character != null && Character.isGameOver) return;
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ToggleGunVisibility();
-        }
-
-        if (!gunVisible)
-            return;
+        if (Input.GetKeyDown(KeyCode.F)) ToggleGunVisibility();
+        if (!gunVisible) return;
 
         if (currentAmmo <= 0 && !spinning)
         {
@@ -109,10 +103,8 @@ public class Gun : MonoBehaviour
 
             if (charAnimator != null)
             {
-                if (charAnimator.HasParameter("IsRunning"))
-                    isRunning = charAnimator.GetBool("IsRunning");
-                if (charAnimator.HasParameter("IsWalking"))
-                    isWalking = charAnimator.GetBool("IsWalking");
+                if (charAnimator.HasParameter("IsRunning")) isRunning = charAnimator.GetBool("IsRunning");
+                if (charAnimator.HasParameter("IsWalking")) isWalking = charAnimator.GetBool("IsWalking");
             }
 
             Vector3 targetOffset;
@@ -144,11 +136,10 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
-        if (animator != null)
-            animator.SetTrigger("Shoot");
+        if (animator != null) animator.SetTrigger("Shoot");
 
+        // Instancia o clone da bala, garantindo que o prefab nunca seja destruído
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.transform.localScale = bulletPrefab.transform.localScale;
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -157,7 +148,9 @@ public class Gun : MonoBehaviour
             rb.velocity = direction * bulletSpeed;
         }
 
+        // Destrói apenas o clone depois de 3 segundos
         Destroy(bullet, 3f);
+
         Vector3 fixedPos = transform.localPosition;
         fixedPos.z = baseZ;
         transform.localPosition = fixedPos;
@@ -229,8 +222,7 @@ public class Gun : MonoBehaviour
             trail.Clear();
         }
 
-        if (ammoText != null)
-            ammoText.enabled = gunVisible;
+        if (ammoText != null) ammoText.enabled = gunVisible;
     }
 }
 

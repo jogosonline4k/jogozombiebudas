@@ -9,9 +9,8 @@ public class WeaponSwitcher : MonoBehaviour
     public GameObject shotgun;
 
     [Header("UI")]
-    public Image weaponIndicator;     // O quadrado no canto da tela
-    public Sprite pistolSprite;       // Sprite para pistola
-    public Sprite shotgunSprite;      // Sprite para escopeta
+    public Image pistolIndicator;   // Indicador da pistola
+    public Image shotgunIndicator;  // Indicador da escopeta
 
     private GameObject activeWeapon;
 
@@ -22,8 +21,7 @@ public class WeaponSwitcher : MonoBehaviour
         pistol.SetActive(true);
         shotgun.SetActive(false);
 
-        weaponIndicator.sprite = pistolSprite;
-
+        UpdateIndicators();
         UpdateAmmoUI();
     }
 
@@ -32,13 +30,13 @@ public class WeaponSwitcher : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwitchWeapon(pistol);
-            weaponIndicator.sprite = pistolSprite;
+            UpdateIndicators();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SwitchWeapon(shotgun);
-            weaponIndicator.sprite = shotgunSprite;
+            UpdateIndicators();
         }
     }
 
@@ -54,9 +52,16 @@ public class WeaponSwitcher : MonoBehaviour
         UpdateAmmoUI();
     }
 
+    void UpdateIndicators()
+    {
+        // Ativa apenas o indicador correspondente
+        pistolIndicator.gameObject.SetActive(activeWeapon == pistol);
+        shotgunIndicator.gameObject.SetActive(activeWeapon == shotgun);
+    }
+
     void UpdateAmmoUI()
     {
-        // Verifica pistola
+        // Pistola
         Gun gun = activeWeapon.GetComponent<Gun>();
         if (gun != null)
         {
@@ -64,7 +69,7 @@ public class WeaponSwitcher : MonoBehaviour
             return;
         }
 
-        // Verifica escopeta
+        // Espingarda
         Escopeta escopeta = activeWeapon.GetComponent<Escopeta>();
         if (escopeta != null)
         {

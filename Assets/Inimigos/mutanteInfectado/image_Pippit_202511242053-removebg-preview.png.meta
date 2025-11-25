@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a7ed44cf5425794a9384f5ac4da6366
+guid: 6afeef2b9d64b4b47ab41944cd17d5e9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -93,316 +93,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_0
+      name: image_Pippit_202511242053-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 81
-        width: 14
-        height: 9
+        x: 0
+        y: 375
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f0808653e059e4196401c68b255f0a
-      internalID: -312008169
+      spriteID: 87d407d69c77e3a44baf361b3dd69524
+      internalID: 768785862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_1
+      name: image_Pippit_202511242053-removebg-preview_1
       rect:
         serializedVersion: 2
-        x: 82
-        y: 86
-        width: 10
-        height: 10
+        x: 125
+        y: 375
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93060352c8a1b2f4cb9ce4c1384819d7
-      internalID: 634900438
+      spriteID: ee0c251abdc5a124985d29326c6c7d5a
+      internalID: -406827738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_2
+      name: image_Pippit_202511242053-removebg-preview_2
       rect:
         serializedVersion: 2
-        x: 58
-        y: 76
-        width: 6
-        height: 6
+        x: 250
+        y: 375
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d99abbd4792ba2846b95b6391d3a11d1
-      internalID: -338769423
+      spriteID: ebf9a70a4e631b942837aafec72e7033
+      internalID: -962657660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_3
+      name: image_Pippit_202511242053-removebg-preview_3
       rect:
         serializedVersion: 2
-        x: 73
-        y: 79
-        width: 8
-        height: 7
+        x: 375
+        y: 375
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 327f68c0ad379134a9fc9316c7b537af
-      internalID: 355938683
+      spriteID: 7c5c5b41cc2c69444a2a2b1fd715d047
+      internalID: -624738050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_4
+      name: image_Pippit_202511242053-removebg-preview_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 64
-        width: 17
-        height: 13
+        x: 0
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83f03b7b0b066d24e9dc3829c2f96d2c
-      internalID: 587318770
+      spriteID: bdb7cd394a306124a8eeae2b8e3c39a9
+      internalID: 1357322777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_5
+      name: image_Pippit_202511242053-removebg-preview_5
       rect:
         serializedVersion: 2
-        x: 76
-        y: 67
-        width: 5
-        height: 5
+        x: 125
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e18ad53d42e575343a49ebaaf1844994
-      internalID: -201355174
+      spriteID: 21c918119e2701e409c6c00f7b996ad8
+      internalID: 1640858620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_6
+      name: image_Pippit_202511242053-removebg-preview_6
       rect:
         serializedVersion: 2
-        x: 39
-        y: 60
-        width: 9
-        height: 7
+        x: 250
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bab5d063bf0c4aa4897fe387aba3c5db
-      internalID: -1829702890
+      spriteID: 2d76da57dee4d7440b64ca401eaddda0
+      internalID: 1363155406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_7
+      name: image_Pippit_202511242053-removebg-preview_7
       rect:
         serializedVersion: 2
-        x: 84
-        y: 55
-        width: 8
-        height: 6
+        x: 375
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df8befa29ed934345bd2d8009b42cc66
-      internalID: 1468824504
+      spriteID: a605181a20b2e414f8586ae5abd4c642
+      internalID: -1997296743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_8
+      name: image_Pippit_202511242053-removebg-preview_8
       rect:
         serializedVersion: 2
-        x: 17
-        y: 7
-        width: 28
-        height: 20
+        x: 0
+        y: 125
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5fbe465b2863c24495efed42b7ff9d2
-      internalID: 2132917678
+      spriteID: 04053470f6316da4f9ee2f6172eeda0d
+      internalID: -2131091349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_9
+      name: image_Pippit_202511242053-removebg-preview_9
       rect:
         serializedVersion: 2
-        x: 58
-        y: 49
-        width: 7
-        height: 7
+        x: 125
+        y: 125
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdb3b271ae34cfd4e812663cf3a2a354
-      internalID: 1884889168
+      spriteID: 06186696fcf666f4db26efc06ddb8521
+      internalID: 46792720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_10
+      name: image_Pippit_202511242053-removebg-preview_10
       rect:
         serializedVersion: 2
-        x: 52
-        y: 29
-        width: 7
-        height: 6
+        x: 250
+        y: 125
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fad61cb0a5db7cf4ea5a0b0acf371200
-      internalID: -1768794829
+      spriteID: 5ea0457e6cf4d7e428036cbe50d147b2
+      internalID: 2143022048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_11
+      name: image_Pippit_202511242053-removebg-preview_11
       rect:
         serializedVersion: 2
-        x: 68
-        y: 28
-        width: 22
-        height: 14
+        x: 375
+        y: 125
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7067d1d3b39b4499073d27a2fa63fb
-      internalID: -61461949
+      spriteID: f00b1eb007e869649ad7e3630a02c66d
+      internalID: -1447679226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_15
+      name: image_Pippit_202511242053-removebg-preview_12
       rect:
         serializedVersion: 2
-        x: 53
-        y: 14
-        width: 15
-        height: 14
+        x: 0
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26fb5f44a6e10c7469bce9629226f72d
-      internalID: 1137514791
+      spriteID: f660a914030063749bc5548009e99022
+      internalID: -2129418010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_16
+      name: image_Pippit_202511242053-removebg-preview_13
       rect:
         serializedVersion: 2
-        x: 81
-        y: 3
-        width: 16
-        height: 14
+        x: 125
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 240a8985c6bbea942a6dbb81da4e7c76
-      internalID: 1365965249
+      spriteID: d7d01fe75cc219748a4453767203eaf5
+      internalID: -402704173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caco de vidro e vidro quebrado_17
+      name: image_Pippit_202511242053-removebg-preview_14
       rect:
         serializedVersion: 2
-        x: 23
-        y: 36
-        width: 16
-        height: 16
+        x: 250
+        y: 0
+        width: 125
+        height: 125
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2886107f5a4414e4a84f2f96c7af17d3
-      internalID: -1702192103
+      spriteID: 61affc691e435e248b62b0efb3447172
+      internalID: -1408210956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: image_Pippit_202511242053-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 125
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa2406f35f6023458390fd6999e8861
+      internalID: 1809064913
       vertices: []
       indices: 
       edges: []
@@ -418,24 +439,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      caco de vidro e vidro quebrado_0: -312008169
-      caco de vidro e vidro quebrado_1: 634900438
-      caco de vidro e vidro quebrado_10: -1768794829
-      caco de vidro e vidro quebrado_11: -61461949
-      caco de vidro e vidro quebrado_12: 2098528860
-      caco de vidro e vidro quebrado_13: -1443893259
-      caco de vidro e vidro quebrado_14: 1972578582
-      caco de vidro e vidro quebrado_15: 1137514791
-      caco de vidro e vidro quebrado_16: 1365965249
-      caco de vidro e vidro quebrado_17: -1702192103
-      caco de vidro e vidro quebrado_2: -338769423
-      caco de vidro e vidro quebrado_3: 355938683
-      caco de vidro e vidro quebrado_4: 587318770
-      caco de vidro e vidro quebrado_5: -201355174
-      caco de vidro e vidro quebrado_6: -1829702890
-      caco de vidro e vidro quebrado_7: 1468824504
-      caco de vidro e vidro quebrado_8: 2132917678
-      caco de vidro e vidro quebrado_9: 1884889168
+      image_Pippit_202511242053-removebg-preview_0: 768785862
+      image_Pippit_202511242053-removebg-preview_1: -406827738
+      image_Pippit_202511242053-removebg-preview_10: 2143022048
+      image_Pippit_202511242053-removebg-preview_11: -1447679226
+      image_Pippit_202511242053-removebg-preview_12: -2129418010
+      image_Pippit_202511242053-removebg-preview_13: -402704173
+      image_Pippit_202511242053-removebg-preview_14: -1408210956
+      image_Pippit_202511242053-removebg-preview_15: 1809064913
+      image_Pippit_202511242053-removebg-preview_2: -962657660
+      image_Pippit_202511242053-removebg-preview_3: -624738050
+      image_Pippit_202511242053-removebg-preview_4: 1357322777
+      image_Pippit_202511242053-removebg-preview_5: 1640858620
+      image_Pippit_202511242053-removebg-preview_6: 1363155406
+      image_Pippit_202511242053-removebg-preview_7: -1997296743
+      image_Pippit_202511242053-removebg-preview_8: -2131091349
+      image_Pippit_202511242053-removebg-preview_9: 46792720
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

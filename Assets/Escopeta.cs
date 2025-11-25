@@ -32,15 +32,11 @@ public class Escopeta : MonoBehaviour
     public Vector2 walkOffset = new Vector2(0.05f, 0);
     public Vector2 runOffset = new Vector2(0.1f, -0.05f);
 
-    // -----------------------------
-    // CONFIGURAÇÕES NOVAS SHOTGUN
-    // -----------------------------
     [Header("Shotgun Settings")]
-    public int shotsPerFire = 5;       // quantas balas por tiro
-    public float spreadAngle = 10f;    // ângulo de spread
-    public float fireRate = 0.2f;      // tempo entre disparos
+    public int shotsPerFire = 5;       
+    public float spreadAngle = 10f;    
+    public float fireRate = 0.2f;      
     private float nextFireTime = 0f;
-    // -----------------------------
 
     void Start()
     {
@@ -61,117 +57,39 @@ public class Escopeta : MonoBehaviour
 
     void Update()
     {
-        if (Character != null && Character.isGameOver)
-            return;
+        if (Character != null && Character.isGameOver) return;
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ToggleGunVisibility();
-        }
+        if (Input.GetKeyDown(KeyCode.F)) ToggleGunVisibility();
+        if (!gunVisible) return;
 
-        if (!gunVisible)
-            return;
+        if (currentAmmo <= 0 && !spinning) Reload();
 
-        if (currentAmmo <= 0 && !spinning)
-        {
-            Reload();
-        }
-
-        // -----------------------------
-        // FIRE RATE + SHOTGUN
-        // -----------------------------
         if (Input.GetMouseButtonDown(0) && !spinning && currentAmmo > 0 && Time.time >= nextFireTime)
         {
             nextFireTime = Time.time + fireRate;
-
             ShootShotgun();
             ApplyRecoil();
-
             currentAmmo--;
             UpdateAmmoUI();
 
             shotCount++;
-            if (shotCount >= 20)
-            {
-                StartSpin();
-            }
-        }
-        // -----------------------------
-
-        if (Input.GetKey(KeyCode.R) && !spinning)
-        {
-            Reload();
+            if (shotCount >= 20) StartSpin();
         }
 
-        if (spinning)
-        {
-            spinElapsed += Time.deltaTime;
-            float t = spinElapsed / spinDuration;
-            float zRotation = Mathf.Lerp(0, 360f * spinTurns, t);
-            transform.localRotation = originalRotation * Quaternion.Euler(0, 0, zRotation);
-            if (spinElapsed >= spinDuration)
-            {
-                EndSpin();
-            }
-        }
-        else
-        {
-            Animator charAnimator = null;
-            if (Character != null)
-            {
-                charAnimator = Character.GetComponent<Animator>();
-            }
+        if (Input.GetKey(KeyCode.R) && !spinning) Reload();
 
-            bool isRunning = false;
-            bool isWalking = false;
-
-            if (charAnimator != null)
-            {
-                if (charAnimator.HasParameter("IsRunning"))
-                    isRunning = charAnimator.GetBool("IsRunning");
-                if (charAnimator.HasParameter("IsWalking"))
-                    isWalking = charAnimator.GetBool("IsWalking");
-            }
-
-            Vector3 targetOffset;
-            Quaternion targetRotation = originalRotation;
-
-            if (isRunning)
-            {
-                targetOffset = new Vector3(runOffset.x, runOffset.y, baseZ);
-                targetRotation *= Quaternion.Euler(0, 0, runTiltAngle);
-            }
-            else if (isWalking)
-            {
-                targetOffset = new Vector3(walkOffset.x, walkOffset.y, baseZ);
-            }
-            else
-            {
-                targetOffset = new Vector3(idleOffset.x, idleOffset.y, baseZ);
-            }
-
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, Time.deltaTime * recoilSpeed);
-            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition + targetOffset, Time.deltaTime * recoilSpeed);
-        }
-
-        if (trail != null && !spinning)
-        {
-            trail.emitting = false;
-        }
+        HandleSpinAndAnimation();
     }
 
-    // ======================================================
-    // SHOOTSHOTGUN — ÚNICA FUNÇÃO NOVA DE TIRO
-    // ======================================================
     void ShootShotgun()
     {
-        if (animator != null)
-            animator.SetTrigger("Shoot");
+        if (animator != null) animator.SetTrigger("Shoot");
 
         for (int i = 0; i < shotsPerFire; i++)
         {
             float angleOffset = Random.Range(-spreadAngle, spreadAngle);
 
+            // Instancia apenas o clone, nunca o prefab
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             bullet.transform.localScale = bulletPrefab.transform.localScale;
 
@@ -183,6 +101,7 @@ public class Escopeta : MonoBehaviour
                 rb.velocity = direction.normalized * bulletSpeed;
             }
 
+            // Destrói somente o clone depois de 3 segundos
             Destroy(bullet, 3f);
         }
 
@@ -190,7 +109,6 @@ public class Escopeta : MonoBehaviour
         fixedPos.z = baseZ;
         transform.localPosition = fixedPos;
     }
-    // ======================================================
 
     void ApplyRecoil()
     {
@@ -237,10 +155,7 @@ public class Escopeta : MonoBehaviour
 
     public void UpdateAmmoUI()
     {
-        if (ammoText != null)
-        {
-            ammoText.text = currentAmmo + " / " + maxAmmo;
-        }
+        if (ammoText != null) ammoText.text = currentAmmo + " / " + maxAmmo;
     }
 
     void ToggleGunVisibility()
@@ -248,9 +163,7 @@ public class Escopeta : MonoBehaviour
         gunVisible = !gunVisible;
 
         foreach (SpriteRenderer r in renderers)
-        {
             r.enabled = gunVisible;
-        }
 
         if (trail != null)
         {
@@ -258,7 +171,38 @@ public class Escopeta : MonoBehaviour
             trail.Clear();
         }
 
-        if (ammoText != null)
-            ammoText.enabled = gunVisible;
+        if (ammoText != null) ammoText.enabled = gunVisible;
+    }
+
+    void HandleSpinAndAnimation()
+    {
+        if (spinning)
+        {
+            spinElapsed += Time.deltaTime;
+            float t = spinElapsed / spinDuration;
+            float zRotation = Mathf.Lerp(0, 360f * spinTurns, t);
+            transform.localRotation = originalRotation * Quaternion.Euler(0, 0, zRotation);
+            if (spinElapsed >= spinDuration) EndSpin();
+        }
+        else
+        {
+            Animator charAnimator = Character != null ? Character.GetComponent<Animator>() : null;
+            bool isRunning = charAnimator != null && charAnimator.HasParameter("IsRunning") && charAnimator.GetBool("IsRunning");
+            bool isWalking = charAnimator != null && charAnimator.HasParameter("IsWalking") && charAnimator.GetBool("IsWalking");
+
+            Vector3 targetOffset;
+            Quaternion targetRotation = originalRotation;
+
+            if (isRunning)
+            {
+                targetOffset = new Vector3(runOffset.x, runOffset.y, baseZ);
+                targetRotation *= Quaternion.Euler(0, 0, runTiltAngle);
+            }
+            else if (isWalking) targetOffset = new Vector3(walkOffset.x, walkOffset.y, baseZ);
+            else targetOffset = new Vector3(idleOffset.x, idleOffset.y, baseZ);
+
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, Time.deltaTime * recoilSpeed);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, originalPosition + targetOffset, Time.deltaTime * recoilSpeed);
+        }
     }
 }

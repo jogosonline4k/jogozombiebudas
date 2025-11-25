@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 971520c4c79938945b63232a6eca2491
+guid: 47d0ca598d4eae2438d2ec5dfc9f68e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUDshotgun_0
+      name: image_Pippit_202511242100-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 46
-        height: 21
+        x: 37
+        y: 260
+        width: 84
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,20 +107,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a012c20f3551b574f89af715670cbe14
-      internalID: -286895588
+      spriteID: f606950d2b9df234283a54af43752899
+      internalID: -665965977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_5
+      name: image_Pippit_202511242100-removebg-preview_1
       rect:
         serializedVersion: 2
-        x: 58
-        y: 0
-        width: 46
-        height: 21
+        x: 149
+        y: 260
+        width: 92
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +128,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17c4a49804278fd4bbb4d90be29d9807
-      internalID: -1772733996
+      spriteID: bb4dd1a3918faea4f9ed8e7a7c3ed76d
+      internalID: 166498618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_10
+      name: image_Pippit_202511242100-removebg-preview_2
       rect:
         serializedVersion: 2
-        x: 115
-        y: 0
-        width: 46
-        height: 21
+        x: 273
+        y: 259
+        width: 88
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2920c7e0d73d20c4bb3e0f4c4afcbe3c
-      internalID: 1935079028
+      spriteID: f0f45f9fe0d23bc4e8d2bd71ea61191d
+      internalID: 1713479573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_14
+      name: image_Pippit_202511242100-removebg-preview_3
       rect:
         serializedVersion: 2
-        x: 168
-        y: 0
-        width: 46
-        height: 21
+        x: 394
+        y: 256
+        width: 82
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 986461bb8247d70458cf83149f01414c
-      internalID: -550740619
+      spriteID: 068e2f8f6010c1d49b857f2d7b3aac40
+      internalID: -179632356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_18
+      name: image_Pippit_202511242100-removebg-preview_4
       rect:
         serializedVersion: 2
-        x: 222
-        y: 0
-        width: 46
-        height: 21
+        x: 39
+        y: 128
+        width: 82
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4acf7d6be70fd534981c91a2d0ddc525
-      internalID: -2054123998
+      spriteID: 5fd6ea9a944065e4e9bc2deccf69aecf
+      internalID: -453310478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_19
+      name: image_Pippit_202511242100-removebg-preview_5
       rect:
         serializedVersion: 2
-        x: 249
-        y: 0
-        width: 4
-        height: 9
+        x: 152
+        y: 129
+        width: 87
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,20 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e89cb185a61c4b4d82a95e19e86b25c
-      internalID: 953691020
+      spriteID: 2f995af994a45584584674abfde4053f
+      internalID: -845370267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_20
+      name: image_Pippit_202511242100-removebg-preview_7
       rect:
         serializedVersion: 2
-        x: 274
-        y: 0
-        width: 46
-        height: 21
+        x: 279
+        y: 129
+        width: 82
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89ee258aced546f4a9096e24d7d6a09c
-      internalID: -1149332677
+      spriteID: 347533773b163f749a113d7022c5f453
+      internalID: 204213163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HUDshotgun_22
+      name: image_Pippit_202511242100-removebg-preview_9
       rect:
         serializedVersion: 2
-        x: 327
-        y: 0
-        width: 46
-        height: 21
+        x: 392
+        y: 130
+        width: 84
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,29 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e195ed9663569946b8aa328f3e82a61
-      internalID: 859736480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HUDshotgun_24
-      rect:
-        serializedVersion: 2
-        x: 377
-        y: 0
-        width: 46
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b98e7d161ca3ddd40b46a24aa7e89167
-      internalID: 253101892
+      spriteID: 7076b227a15bd2c489cb28e621443276
+      internalID: 1984905539
       vertices: []
       indices: 
       edges: []
@@ -292,31 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HUDshotgun_0: -286895588
-      HUDshotgun_1: 897790707
-      HUDshotgun_10: 1935079028
-      HUDshotgun_11: -523863098
-      HUDshotgun_12: -1205435217
-      HUDshotgun_13: -1071811820
-      HUDshotgun_14: -550740619
-      HUDshotgun_15: -1204830801
-      HUDshotgun_16: 916907524
-      HUDshotgun_17: 338595043
-      HUDshotgun_18: -2054123998
-      HUDshotgun_19: 953691020
-      HUDshotgun_2: -1983368969
-      HUDshotgun_20: -1149332677
-      HUDshotgun_21: -314739742
-      HUDshotgun_22: 859736480
-      HUDshotgun_23: -1578428764
-      HUDshotgun_24: 253101892
-      HUDshotgun_3: 571318823
-      HUDshotgun_4: 996764779
-      HUDshotgun_5: -1772733996
-      HUDshotgun_6: -1624609473
-      HUDshotgun_7: -1920458223
-      HUDshotgun_8: -1815729618
-      HUDshotgun_9: -65626186
+      image_Pippit_202511242100-removebg-preview_0: -665965977
+      image_Pippit_202511242100-removebg-preview_1: 166498618
+      image_Pippit_202511242100-removebg-preview_2: 1713479573
+      image_Pippit_202511242100-removebg-preview_3: -179632356
+      image_Pippit_202511242100-removebg-preview_4: -453310478
+      image_Pippit_202511242100-removebg-preview_5: -845370267
+      image_Pippit_202511242100-removebg-preview_6: -109443994
+      image_Pippit_202511242100-removebg-preview_7: 204213163
+      image_Pippit_202511242100-removebg-preview_8: -167958256
+      image_Pippit_202511242100-removebg-preview_9: 1984905539
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
